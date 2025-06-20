@@ -12,7 +12,7 @@ stages:
       md5: ce80aae4059dbe0dbe36669da217db0b
       size: 980
     outs:
-    - path: artifacts/data_ingestion/chest Cancer Images
+    - path: artifacts/data_ingestion/Chest_Cancer_Images
       hash: md5
       md5: a5ecabe25c740cafce7f80e84e68040b.dir
       size: 58046630
@@ -47,7 +47,7 @@ stages:
   model_training:
     cmd: python src/Chest_Cancer_Classifier/pipeline/stage_03_model_trainer.py
     deps:
-    - path: artifacts/data_ingestion/chest Cancer Images
+    - path: artifacts/data_ingestion/Chest_Cancer_Images
       hash: md5
       md5: a5ecabe25c740cafce7f80e84e68040b.dir
       size: 58046630
