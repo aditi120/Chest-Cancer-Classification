@@ -1,6 +1,7 @@
 from src.Chest_Cancer_Classifier.constants import *
 from src.Chest_Cancer_Classifier.utils.common import read_yaml,create_directories
 from src.Chest_Cancer_Classifier.entity.config_entity import DataIngestionConfig,PrepareBaseModelConfig,TrainingConfig
+from Chest_Cancer_Classifier import logger
 import os
 
 class ConfigurationManager:
@@ -55,7 +56,7 @@ class ConfigurationManager:
         training = self.config.training
         prepare_base_model = self.config.prepare_base_model
         params = self.params
-        training_data = os.path.join(self.config.data_ingestion.unzip_dir,"chest Cancer Images")
+        training_data = os.path.join(self.config.data_ingestion.unzip_dir,"Chest_Cancer_Images")
         create_directories([
             Path(training.root_dir)
         ])
